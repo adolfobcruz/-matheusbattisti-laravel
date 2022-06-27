@@ -14,7 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $name   = 'Adolfo';
+    $age    = 32;
+    $job    = 'Desenvolvedor';
+
+    return view('welcome', ['nome' => $name, 'age' => $age, 'job' => $job]);
 });
 
 Route::get('/contact', function () {
