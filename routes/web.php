@@ -13,37 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-	$name   = 'Adolfo';
-	$age    = 32;
-	$job    = 'Desenvolvedor';
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\ProductController;
 
-	$arr    = [10, 20, 30, 40, 50];
-
-	$nomes  = ['Matheus', 'Maria', 'João', 'Saulo'];
-
-	return view(
-		'welcome',
-		[
-			'nome'  => $name,
-			'age'   => $age,
-			'job'   => $job,
-			'arr'   => $arr,
-			'nomes' => $nomes,
-		]
-	);
-});
-
-Route::get('/contact', function () {
-	return view('contact');
-});
-
-Route::get('/products', function () {
-	$search = request('search');
-
-	return view('products', ['search' => $search]);
-});
-
-Route::get('/products/{id?}', function ($id = null) {
-	return view('product', ['id' => $id]);
-});
+Route::get('/', 								[EventController::class, 		'index']);
+Route::get('/contacts/index',		[ContactController::class, 	'index']);
+Route::get('/events/create',		[EventController::class, 		'create']);
+Route::get('/products/create',	[ProductController::class,	'create']);

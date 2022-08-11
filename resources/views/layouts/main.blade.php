@@ -33,33 +33,6 @@
   </head>
   <body>
     <header>
-      {{-- <nav class="navbar navbar-expand-lg navbar-light">
-        <div id="navbar" class="collapse navbar-collapse">
-          <a href="/" class="navbar-brand">
-            <img
-              src="https://e7.pngegg.com/pngimages/914/758/png-clipart-computer-icons-logo-github-github-logo-logo-computer-program-thumbnail.png"
-              alt="GitHub">
-          </a>
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a href="/" class="nav-link">
-                Eventos
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="/" class="nav-link">
-                Criar Eventos
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="/" class="nav-link">
-                Entrar
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav> --}}
-
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Navbar</a>
@@ -69,21 +42,19 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="http://localhost/lab-matheusbattisti-laravel/public/">
+                  Eventos
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+                <a
+                  class="nav-link"
+                  href="http://localhost/lab-matheusbattisti-laravel/public/events/create">
+                  Criar Eventos
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled">Disabled</a>
@@ -103,5 +74,14 @@
     <footer>
       <p>HDC Events &copy; 2020</p>
     </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
+    </script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js">
+    </script>
   </body>
 </html>
