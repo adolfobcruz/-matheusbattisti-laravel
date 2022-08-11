@@ -14,28 +14,36 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $name   = 'Adolfo';
-    $age    = 32;
-    $job    = 'Desenvolvedor';
+	$name   = 'Adolfo';
+	$age    = 32;
+	$job    = 'Desenvolvedor';
 
-    $arr    = [10, 20, 30, 40, 50];
+	$arr    = [10, 20, 30, 40, 50];
 
-    $nomes  = ['Matheus', 'Maria', 'João', 'Saulo'];
+	$nomes  = ['Matheus', 'Maria', 'João', 'Saulo'];
 
-    return view('welcome',
-        [
-            'nome'  => $name,
-            'age'   => $age,
-            'job'   => $job,
-            'arr'   => $arr,
-            'nomes' => $nomes,
-        ]);
+	return view(
+		'welcome',
+		[
+			'nome'  => $name,
+			'age'   => $age,
+			'job'   => $job,
+			'arr'   => $arr,
+			'nomes' => $nomes,
+		]
+	);
 });
 
 Route::get('/contact', function () {
-    return view('contact');
+	return view('contact');
 });
 
-Route::get('/product', function () {
-    return view('product');
+Route::get('/products', function () {
+	$search = request('search');
+
+	return view('products', ['search' => $search]);
+});
+
+Route::get('/products/{id?}', function ($id = null) {
+	return view('product', ['id' => $id]);
 });
